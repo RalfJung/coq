@@ -36,30 +36,7 @@ env:
   - COQ_DEST="-local"
   # Main test suites
   matrix:
-  - TEST_TARGET="test-suite" COMPILER="4.02.3+32bit"
-  - TEST_TARGET="validate"                           TW="travis_wait"
-  - TEST_TARGET="validate"   COMPILER="4.02.3+32bit" TW="travis_wait"
-  - TEST_TARGET="ci-bignums TIMED=1"
-  - TEST_TARGET="ci-color TIMED=1"
-  - TEST_TARGET="ci-compcert TIMED=1"
-  - TEST_TARGET="ci-coq-dpdgraph" EXTRA_OPAM="ocamlgraph"
-  - TEST_TARGET="ci-coquelicot TIMED=1"
-  - TEST_TARGET="ci-geocoq TIMED=1"
-  - TEST_TARGET="ci-fiat-crypto TIMED=1"
-  - TEST_TARGET="ci-fiat-parsers TIMED=1"
-  - TEST_TARGET="ci-flocq TIMED=1"
-  - TEST_TARGET="ci-formal-topology TIMED=1"
-  - TEST_TARGET="ci-hott TIMED=1"
   - TEST_TARGET="ci-iris-coq TIMED=1"
-  - TEST_TARGET="ci-math-classes TIMED=1"
-  - TEST_TARGET="ci-math-comp TIMED=1"
-  - TEST_TARGET="ci-sf TIMED=1"
-  - TEST_TARGET="ci-unimath TIMED=1"
-  - TEST_TARGET="ci-vst TIMED=1"
-  # Not ready yet for 8.7
-  # - TEST_TARGET="ci-cpdt TIMED=1"
-  # - TEST_TARGET="ci-metacoq TIMED=1"
-  # - TEST_TARGET="ci-tlc TIMED=1"
 
 matrix:
 
