@@ -16,7 +16,7 @@ opam repo add iris-dev https://gitlab.mpi-sws.org/FP/opam-dev.git -p 0 || opam u
 git_checkout ${lambdaRust_CI_BRANCH} ${lambdaRust_CI_GITURL} ${lambdaRust_CI_DIR}
 
 # Extract required version of Iris
-Iris_VERSION=$(cat ${Iris_CI_DIR}/opam | fgrep coq-iris | egrep 'dev\.([0-9.-]+)' -o)
+Iris_VERSION=$(cat ${lambdaRust_CI_DIR}/opam | fgrep coq-iris | egrep 'dev\.([0-9.-]+)' -o)
 Iris_URL=$(opam show coq-iris.$Iris_VERSION -f upstream-url)
 read -a Iris_URL_PARTS <<< $(echo $Iris_URL | tr '#' ' ')
 
